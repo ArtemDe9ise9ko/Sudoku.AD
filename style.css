@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body, .wrapper{
+    height: 100%;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    margin: 0; 
+    padding: 0 24px;
+    background-color: #fce338;
+    font-family: "Ubuntu";
+    color: #000;
+}
+
+.sudoku-card{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 30px;
+    border-radius: 1.25rem;
+    background: #fff;
+    text-align: center;
+}
+
+.sudoku-card>h2{
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+
+.sudoku-card > h3{
+    color:rgba(0,0,0, 0.38);
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.sudoku-form{
+    width: 100%;
+    margin: 0;
+    display: grid;
+}
+
+.sudoku-form > button{
+    width: 100%;
+    height: 50px;
+}
+
+.sudoku-form > textarea {
+    border: 2px solid #ebebeb;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 0.5rem;
+    transition: all 0.375s;
+    width: 100%;
+    height: 230px;
+    resize: none;
+    overflow:hidden
+}
+
+.sudoku-form > button{
+    cursor: pointer;
+    width:100%;
+    padding: 0 15px;
+    border-radius: 1.25rem;
+    background: #216ce7;
+    color: #f9f9f9;
+    border: 0;
+    font-family: inherit;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+}
+
+#sudokuBox:hover, 
+.sudoku-form > textarea:focus {
+    outline: none !important;
+    border: 2px solid #10449a;
+}
+
+.sudoku-form > button:hover{
+    background: #10449a
+}
+
+.active-error {
+    width: 100%;
+    margin: 0px;
+    padding: 10px 0 0 0;
+    color: #900;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.active-successful {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0 0;
+    color: #090;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+#sudokuInfo {
+    padding: 0;
+    margin: 0;
+}
+#resultInfo {
+    padding: 20px 0;
+    margin: 0;
+    text-align: left;
+    font-size: 20px;
+}
+
+@media (width >=500px){
+    body{
+        padding: 0;
+    }
+    .sudoku-card{
+        margin: 0; 
+        width: 350px;
+    }
+}
