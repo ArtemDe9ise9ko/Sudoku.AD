@@ -1,6 +1,5 @@
 const sudokuBox = document.getElementById("sudokuBox");
 const sudokuBoxInfo = document.getElementById("sudokuInfo");
-const resultInfo = document.getElementById("resultInfo");
 
 const messageArrayExample = `* Put a correct datas like:
 [
@@ -21,8 +20,6 @@ of 1 to 9.`;
 const rowInfo = `* Sudoku has invalid row(s).`;
 const columnInfo = `* Sudoku has invalid Column(s).`;
 const squareInfo3x3 = `* Sudoku has invalid square(s) 3x3.`;
-const trueInfo = "return: true";
-const falseInfo = "return: false";
 
 function validSolution() {
 
@@ -66,12 +63,10 @@ function validSolution() {
 
 function showErrorMessage(message) {
     sudokuBoxInfo.innerHTML = `<pre class="active-error">${message}</pre>`;
-    resultInfo.textContent = falseInfo;
 }
 function showSuccessfulMessage() {
     sudokuBoxInfo.classList.remove("active-error");
     sudokuBoxInfo.innerHTML = `<pre class="active-successful">${messageSeccesfull}</pre>`;
-    resultInfo.textContent = trueInfo;
 }
 function textToTwoDimensionalArray() {
     text = sudokuBox.value.replace(/\n|\[|\]|\s/g, '');
